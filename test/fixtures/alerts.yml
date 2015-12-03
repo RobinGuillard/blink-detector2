@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  heures: 1
+  minutes: 1
+  lieu: MyString
+  active: false
+
+two:
+  heures: 1
+  minutes: 1
+  lieu: MyString
+  active: false
