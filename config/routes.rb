@@ -2,13 +2,23 @@ Rails.application.routes.draw do
   resources :alerts
   post '/alerts/:id' => 'alerts#rendre_active'
   post '/alerts/:id/edit' => 'alerts#fait_il_beau'
+
   #get '/alerts/:id/fait_il_beau',  :to => 'alerts#fait_il_beau'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+  
+ namespace :api, :defaults => {:format => :json} do
+    namespace :v1 do
 
+      controller :whatever, path: '/whatever' do
+        match 'post_action', via: [ :post, :options]
+      end
+      
+    end
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

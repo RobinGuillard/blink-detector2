@@ -7,6 +7,13 @@ class AlertsController < ApplicationController
   require 'time'
   require'date'
 
+
+
+  def upload
+    # Do complicated super secret stuff
+    
+    render json: { success: true }
+  end
   # GET /alerts
   # GET /alerts.json
   def index
