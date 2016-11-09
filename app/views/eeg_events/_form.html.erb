@@ -1,0 +1,25 @@
+<%= form_for(@eeg_event) do |f| %>
+  <% if @eeg_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@eeg_event.errors.count, "error") %> prohibited this eeg_event from being saved:</h2>
+
+      <ul>
+      <% @eeg_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :event %><br>
+    <%= f.text_field :event %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

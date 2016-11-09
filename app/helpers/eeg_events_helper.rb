@@ -1,0 +1,2 @@
+module EegEventsHelper
+end

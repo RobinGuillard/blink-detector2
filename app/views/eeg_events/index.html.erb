@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Eeg Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eeg_events.each do |eeg_event| %>
+      <tr>
+        <td><%= eeg_event.event %></td>
+        <td><%= eeg_event.date %></td>
+        <td><%= link_to 'Show', eeg_event %></td>
+        <td><%= link_to 'Edit', edit_eeg_event_path(eeg_event) %></td>
+        <td><%= link_to 'Destroy', eeg_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eeg event', new_eeg_event_path %>

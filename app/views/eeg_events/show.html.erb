@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @eeg_event.event %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @eeg_event.date %>
+</p>
+
+<%= link_to 'Edit', edit_eeg_event_path(@eeg_event) %> |
+<%= link_to 'Back', eeg_events_path %>

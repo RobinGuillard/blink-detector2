@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :eeg_events
+  resources :eeg_events
   resources :alerts
   post '/alerts/:id' => 'alerts#rendre_active'
   post '/alerts/:id/edit' => 'alerts#fait_il_beau'
