@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Eegs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eegs.each do |eeg| %>
+      <tr>
+        <td><%= eeg.event %></td>
+        <td><%= eeg.date %></td>
+        <td><%= link_to 'Show', eeg %></td>
+        <td><%= link_to 'Edit', edit_eeg_path(eeg) %></td>
+        <td><%= link_to 'Destroy', eeg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eeg', new_eeg_path %>

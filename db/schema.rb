@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161109004033) do
+ActiveRecord::Schema.define(version: 20161109010124) do
 
   create_table "alerts", force: :cascade do |t|
     t.integer  "heures"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20161109004033) do
   end
 
   create_table "eeg_events", force: :cascade do |t|
+    t.string   "event"
+    t.date     "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "eegs", force: :cascade do |t|
     t.string   "event"
     t.date     "date"
     t.datetime "created_at", null: false

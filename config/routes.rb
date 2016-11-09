@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :eegs
+  resources :eegs
   resources :eeg_events
   resources :eeg_events
   resources :alerts
