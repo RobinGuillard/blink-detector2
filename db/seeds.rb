@@ -6,16 +6,28 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-alert.create(
+Alert.create(
 	heures: "11",
-	Minutes: "12",
-	Lieu: "Paris",
-	Active: true
+	minutes: "12",
+	lieu: "Paris",
+	active: true
 	)
 	
-alert.create(
+Alert.create(
 	heures: "13",
-	Minutes: "14",
-	Lieu: "Paris",
-	Active: false
+	minutes: "14",
+	lieu: "Paris",
+	active: false
 	)
+
+Eeg.create(
+	event: "a blink occured",
+	date: "2016-11-09"
+	)
+
+Eeg.create(
+	event: "another blink occured",
+	date: "2016-11-09"
+	)
+
+
