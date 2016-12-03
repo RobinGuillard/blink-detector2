@@ -1,0 +1,29 @@
+<%= form_for(@concentration) do |f| %>
+  <% if @concentration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@concentration.errors.count, "error") %> prohibited this concentration from being saved:</h2>
+
+      <ul>
+      <% @concentration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :concentration_level %><br>
+    <%= f.number_field :concentration_level %>
+  </div>
+  <div class="field">
+    <%= f.label :concentration_value %><br>
+    <%= f.text_field :concentration_value %>
+  </div>
+  <div class="field">
+    <%= f.label :datetime %><br>
+    <%= f.datetime_select :datetime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

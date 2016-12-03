@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  concentration_level: 1
+  concentration_value: 1.5
+  datetime: 2016-12-03 11:24:03
+
+two:
+  concentration_level: 1
+  concentration_value: 1.5
+  datetime: 2016-12-03 11:24:03

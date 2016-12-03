@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161109010124) do
+ActiveRecord::Schema.define(version: 20161203192403) do
 
   create_table "alerts", force: :cascade do |t|
     t.integer  "heures"
@@ -20,6 +20,26 @@ ActiveRecord::Schema.define(version: 20161109010124) do
     t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "blinks", force: :cascade do |t|
+    t.string   "event"
+    t.string   "string"
+    t.datetime "datetime"
+    t.time     "time"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "blinks", ["user_id"], name: "index_blinks_on_user_id"
+
+  create_table "concentrations", force: :cascade do |t|
+    t.integer  "concentration_level"
+    t.float    "concentration_value"
+    t.datetime "datetime"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "eeg_events", force: :cascade do |t|
@@ -32,6 +52,12 @@ ActiveRecord::Schema.define(version: 20161109010124) do
   create_table "eegs", force: :cascade do |t|
     t.string   "event"
     t.date     "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Concentration level:</strong>
+  <%= @concentration.concentration_level %>
+</p>
+
+<p>
+  <strong>Concentration value:</strong>
+  <%= @concentration.concentration_value %>
+</p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @concentration.datetime %>
+</p>
+
+<%= link_to 'Edit', edit_concentration_path(@concentration) %> |
+<%= link_to 'Back', concentrations_path %>

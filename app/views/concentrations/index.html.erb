@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Concentrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Concentration level</th>
+      <th>Concentration value</th>
+      <th>Datetime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @concentrations.each do |concentration| %>
+      <tr>
+        <td><%= concentration.concentration_level %></td>
+        <td><%= concentration.concentration_value %></td>
+        <td><%= concentration.datetime %></td>
+        <td><%= link_to 'Show', concentration %></td>
+        <td><%= link_to 'Edit', edit_concentration_path(concentration) %></td>
+        <td><%= link_to 'Destroy', concentration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Concentration', new_concentration_path %>

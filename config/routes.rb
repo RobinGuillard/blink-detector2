@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :concentrations
+  resources :users
   resources :eegs
   resources :eegs
   resources :eeg_events
@@ -6,7 +8,8 @@ Rails.application.routes.draw do
   resources :alerts
   post '/alerts/:id' => 'alerts#rendre_active'
   post '/alerts/:id/edit' => 'alerts#fait_il_beau'
-
+  post 'users/:id/doblink' => 'users#doblink'
+  get 'users/:id/doblink' => 'users#list_blink'
   #get '/alerts/:id/fait_il_beau',  :to => 'alerts#fait_il_beau'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

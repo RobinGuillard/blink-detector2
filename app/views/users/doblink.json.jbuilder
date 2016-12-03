@@ -1,0 +1,1 @@
+json.extract! @blinking, :id, :event, :datetime, :time
