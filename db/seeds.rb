@@ -31,3 +31,14 @@ Eeg.create(
 	)
 
 
+Concentration.create(
+	concentration_level: 0,
+	concentration_value: 0.1
+
+	)
+
+Concentration.create(
+	concentration_level: 0,
+	concentration_value: 0.2
+
+	)
